@@ -1,5 +1,6 @@
 package com.example.excelfileuploading.utility;
 
+import com.example.excelfileuploading.interfaces.LogAspect;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
@@ -39,7 +40,7 @@ public class FileUploadUtility {
         }
         return fileUploaded;
     }
-
+    @LogAspect
     public static void  checkingAspect(){
         System.out.println("checking if aspects is working");
     }
